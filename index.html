@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abhishek Portfolio</title>
+  <link rel="stylesheet" href="port.css" />
+</head>
+<body>
+  <div id="header">
+    <div class="container">
+      <nav>
+        <ul>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#">SERVICE</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+
+        </ul>
+      </nav>
+
+      <div class="header-content">
+        <div class="header-text">
+          <p>UI/UX Designer</p>
+          <h1>Hi, I`m <span>Abhishek</span><br>kumar from Patna</h1>
+        </div>
+        <div class="header-image">
+          <img src="resume.jpg" alt="profile photo" class="header-profile-pic" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="resume.jpg" alt="profile image">
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p>
+            I'm a passionate problem solver and creative developer with over <strong>100+ LeetCode challenges</strong> solved. 
+            I love turning ideas into interactive, user-friendly web and mobile experiences.
+            I’ve built multiple small-scale projects and made this portfolio site fully responsive. 
+            My goal is to combine clean design with powerful logic.
+          </p>
+
+          <div class="tab-title">
+            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+            <p class="tab-links" onclick="opentab('education')">Education</p>
+          </div>
+
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li><span>Web Development</span><br>HTML, CSS, JavaScript, responsive design</li>
+              <li><span>Problem Solving</span><br>100+ DSA problems solved on LeetCode</li>
+              <li><span>UI/UX Design</span><br>Wireframes & user-first design principles</li>
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li><span>Personal Projects</span><br>Built several mini projects including portfolio, to-do app, and quiz app</li>
+              <li><span>Responsive Design</span><br>Created websites that adapt to all screen sizes using Flexbox and media queries</li>
+              <li><span>Team Projects</span><br>Collaborated on school/college-level coding and UI challenges</li>
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><span>Bachelor's in Computer Science</span><br>Ongoing (Rajasthan)</li>
+              <li><span>Front-End Self Learning</span><br>Learned through YouTube, practice, and open-source</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Contact Section -->
+<div id="contact">
+  <div class="container">
+    <h1 class="sub-title">Contact Me</h1>
+    <div class="contact-info">
+      <p><strong>Phone:</strong> <a href="tel:+91XXXXXXXXXX">+91-7050085814</a></p>
+      <p><strong>Instagram:</strong> <a href="https://www.instagram.com/abhishek_.singh_.rajput_?igsh=ZXNpZWd5eHlsaHI5" target="_blank">@Abhishek kumar</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/abhiskek-kumar-550196328?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">@Abhishek kumar</a></p>
+    </div>
+  </div>
+</div>
+
+  <script>
+    const tablinks = document.getElementsByClassName("tab-links");
+    const tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+      for (tablink of tablinks) {
+        tablink.classList.remove("active-link");
+      }
+
+      for (tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+    }
+  </script>
+</body>
+</html>
